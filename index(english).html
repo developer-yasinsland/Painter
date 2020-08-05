@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Pixel Art Maker!</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bttn.css/0.2.4/bttn.css">
+    <link rel="stylesheet" href="Style.css">
+</head>
+<body>
+    <a id="arabic" href="index(arabic).html">
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>عربي
+    </a>
+    <h1>Drawing with squares</h1><hr>
+    <h2>Choose Grid Size</h2>
+    <form id="sizePicker">
+        <div id="backcolor">
+            Grid Height <input type="number" id="inputHeight" name="height" min="1" placeholder="Height">
+            Grid Width <input type="number" id="inputWidth" name="width" min="1" placeholder="Width">
+        </div>
+        <br>
+        <div id="hrg"><input type="submit" value="Create!" class="bttn-jelly bttn-md bttn-warning"></div>
+    </form>
+    <div class="center" hidden>
+        <br>
+        <select id="service">
+            <option value= "colour">Colouring</option>
+            <option value="typ">Typing</option>
+        </select>
+    </div><br>
+    <div id="colourpicker">
+        <h2>Pick A Color</h2>
+        <br><input type="color" id="colorPicker" class="bttn-success bttn-sm bttn-unite"><br><br><br><br>
+    </div>
+    <h2>Design Canvas</h2>
+    <button id="hidegrids" class="bttn-danger bttn-md bttn-slant">Hide Grid Lines</button>&emsp;&emsp;&emsp;&emsp;
+    <button id="returngrids" class="bttn-danger bttn-md bttn-slant">Show Grid Lines</button><br><br>
+    <table id="pixelCanvas"><tbody>
+
+    </tbody></table>
+    <script src="Script.js"></script>
+</body>
+</html>

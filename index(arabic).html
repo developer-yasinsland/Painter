@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>صانع الفن بالمربعات!</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bttn.css/0.2.4/bttn.css">
+    <link rel="stylesheet" href="Style.css">
+</head>
+<body>
+    <a id="english" href="index(english).html">
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>english
+    </a>
+    <h1>الرسم بالمربعات</h1><hr>
+    <h2>اختر حجم الرقعة</h2>
+    <form id="sizePicker">
+        <div id="backcolor">
+            <input type="number" id="inputWidth" name="height" min="1" placeholder="العرض">طول الرقعة
+            <input type="number" id="inputHeight" name="width" min="1" placeholder="الطول">عرض الرقعة
+        </div>
+        <br>
+        <div id="hrg"><input type="submit" class="bttn-jelly bttn-md bttn-warning" value="!إنشاء"></div>
+    </form>
+    <div class="center" hidden>
+        <br>
+        <select id="service">
+            <option value= "colour">تلوين</option>
+            <option value="typ">كتابة</option>
+        </select>
+    </div><br>
+    <div id="colourpicker">
+        <h2>إختر اللون</h2>
+        <br><input type="color" id="colorPicker" class="bttn-success bttn-sm bttn-unite"><br><br><br><br>
+    </div>
+    <h2>تصميم اللوحة</h2>
+    <button id="hidegrids" class="bttn-danger bttn-md bttn-slant">إخفاء خطوط الشبكة</button>&emsp;&emsp;&emsp;&emsp;
+    <button id="returngrids" class="bttn-danger bttn-md bttn-slant">إظهار خطوط الشبكة</button><br><br>
+    <table id="pixelCanvas"><tbody>
+        
+    </tbody></table>
+    <script src="Script.js"></script>
+</body>
+</html>
