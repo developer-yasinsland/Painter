@@ -37,7 +37,7 @@ function makeGrid(e) {
                 gtrid[atcounter].style.cursor = "text";
                 gtrid[atcounter].addEventListener("keydown", function() {
                     this.style.fontFamily = document.getElementById("fontFamily").value;
-                    this.style.fontSize = document.getElementById("fontSize").value + "px";
+                    this.style.fontSize = document.getElementById("fontSize").value + "pt";
                     this.style.color = document.getElementById("fontColor").value;
                 });
             }
