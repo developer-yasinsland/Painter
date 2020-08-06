@@ -42,6 +42,7 @@ function makeGrid(e) {
     document.getElementById("service").addEventListener("change", selection);
     for (var acounter = 0; acounter < grid.length; acounter++) {
         grid[acounter].addEventListener("click", elisten);
+        grid[acounter].addEventListener("dblclick", function() {this.style.backgroundColor = "transparent"});
     }
     function hideTheGrid() {
         var tableCells = document.getElementsByTagName("td");
