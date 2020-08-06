@@ -30,12 +30,23 @@ function makeGrid(e) {
         var gtrid = document.querySelectorAll("td");
         for (var atcounter = 0; atcounter < gtrid.length; atcounter++) {
             if (document.getElementsByTagName("select")[0].value == "typ") {
+                document.getElementById("typin").removeAttribute("hidden");
+                document.getElementById("colourin").setAttribute("hidden", "true");
                 gtrid[atcounter].removeEventListener("click", elisten);
                 gtrid[atcounter].contentEditable = true;
+                gtrid[atcounter].style.cursor = "text";
+                gtrid[atcounter].addEventListener("keydown", function() {
+                    this.style.fontFamily = document.getElementById("fontFamily").value;
+                    this.style.fontSize = document.getElementById("fontSize").value + "px";
+                    this.style.color = document.getElementById("fontColor").value;
+                });
             }
             else if(document.getElementsByTagName("select")[0].value == "colour") {
+                document.getElementById("typin").setAttribute("hidden", "true");
+                document.getElementById("colourin").removeAttribute("hidden");
                 gtrid[atcounter].addEventListener("click", elisten);
                 gtrid[atcounter].contentEditable = false;
+                gtrid[atcounter].style.cursor = "cell";
             }
         }
     };
