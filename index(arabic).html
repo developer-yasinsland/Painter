@@ -6,7 +6,7 @@
     <link rel="stylesheet" href="Style.css">
 </head>
 <body>
-    <a id="english" href="index.html">
+    <a id="english" href="index(english).html">
         <span></span>
         <span></span>
         <span></span>
@@ -30,8 +30,18 @@
         </select>
     </div><br>
     <div id="colourpicker">
-        <h2>إختر اللون</h2>
-        <br><input type="color" id="colorPicker" class="bttn-success bttn-sm bttn-unite"><br><br><br><br>
+        <div id="colourin">
+            <h2>إختر لونا</h2>
+            <br><input type="color" id="colorPicker" class="bttn-success bttn-sm bttn-unite"><br><br><br><br>
+        </div>
+        <div id="typin" hidden>
+            <h2>اختر لون الخط</h2>
+            <br><input type="color" id="fontColor" class="bttn-success bttn-sm bttn-unite"><br><br><br><br>
+            <h2>أدخل حجم الخط</h2>
+            <br><input type="number" id="fontSize"><br><br><br><br>
+            <h2>أدخل نوع الخط باللغة الإنجليزية</h2>
+            <br><input type="text" id="fontFamily"><br><br><br><br>
+        </div>
     </div>
     <h2>تصميم اللوحة</h2>
     <button id="hidegrids" class="bttn-danger bttn-md bttn-slant">إخفاء خطوط الشبكة</button>&emsp;&emsp;&emsp;&emsp;
