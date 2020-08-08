@@ -78,5 +78,29 @@ function makeGrid(e) {
         }
     }
     document.getElementById("returngrids").addEventListener("click", showTheGrid);
+    function exportTableToExcel(){
+        var filename = 'drawing'
+        var downloadLink;
+        var dataType = 'application/vnd.ms-excel';
+        var tableSelect = document.getElementById("pixelCanvas");
+        var tableHTML = tableSelect.outerHTML.replace(/ /g, '%20');
+        filename = filename?filename+'.xls':'excel_data.xls';
+        downloadLink = document.createElement("a");
+        
+        document.body.appendChild(downloadLink);
+        
+        if(navigator.msSaveOrOpenBlob){
+            var blob = new Blob(['\ufeff', tableHTML], {
+                type: dataType
+            });
+            navigator.msSaveOrOpenBlob( blob, filename);
+        }else{
+            downloadLink.href = 'data:' + dataType + ', ' + tableHTML;
+            downloadLink.download = filename;
+            downloadLink.click();
+        }
+    }
+    document.getElementById("download").addEventListener("click", exportTableToExcel);
+    document.getElementById("download").removeAttribute("hidden");
 }
 document.getElementById("sizePicker").addEventListener("submit", makeGrid);
