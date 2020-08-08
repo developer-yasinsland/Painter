@@ -92,6 +92,9 @@ input[type=color] {
     left: 0;
     top: 50%;
 }*/
+#download {
+    margin: 50px;
+}
 a {
     font-family: consolas;
     position: relative;
@@ -192,7 +195,10 @@ a:hover span:nth-child(4) {
 #returngrids {
     margin-left: 80px;
 }
-@media all and (max-width: 500px) {
+@media all and (max-width: 500px) and (max-height: 1000px) {
+    h1 {
+        font-size: 200%;
+    }
     #hidegrid {
         margin-bottom: 40px;
         margin-right: 0;
