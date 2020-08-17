@@ -79,7 +79,7 @@ function makeGrid(e) {
     }
     document.getElementById("returngrids").addEventListener("click", showTheGrid);
     function exportTableToExcel(){
-        var filename = 'drawing';
+        var filename = prompt("The file name/اسم الملف", "drawing")
         var downloadLink;
         var dataType = 'application/vnd.ms-excel';
         var tableSelect = document.getElementById("pixelCanvas");
